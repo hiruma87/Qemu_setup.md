@@ -1,7 +1,7 @@
 # Qemu_setup.md
 
 ## Credit
-tatumroaquin: `https://gist.github.com/tatumroaquin`
+tatumroaquin: [tatumroaquin Gist Github](https://gist.github.com/tatumroaquin)
 
 ## Check Virtualization Support
 
