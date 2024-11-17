@@ -351,7 +351,7 @@ In the `system` mode you are granted access to all system resources.
 ### Granting system-wide access to regular user.
 1. check current mode
 ```bash
-sudo virsh uri
+virsh uri
 ```
 > qemu:///session
 
