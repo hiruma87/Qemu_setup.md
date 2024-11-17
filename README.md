@@ -1,7 +1,5 @@
 # Qemu_setup.md
 
-# QEMU-KVM in Arch Linux
-
 ## Check Virtualization Support
 
 ### Check CPU has VM capabilities
@@ -430,3 +428,5 @@ default:group::--x
 default:mask::rwx
 default:other::--x
 ```
+### Credit
+tatumroaquin: `https://gist.github.com/tatumroaquin`
