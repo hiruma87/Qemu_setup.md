@@ -1,5 +1,8 @@
 # Qemu_setup.md
 
+## Credit
+tatumroaquin: `https://gist.github.com/tatumroaquin`
+
 ## Check Virtualization Support
 
 ### Check CPU has VM capabilities
@@ -428,5 +431,4 @@ default:group::--x
 default:mask::rwx
 default:other::--x
 ```
-### Credit
-tatumroaquin: `https://gist.github.com/tatumroaquin`
+
