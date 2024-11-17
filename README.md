@@ -354,6 +354,11 @@ In the `system` mode you are granted access to all system resources.
 virsh uri
 ```
 > qemu:///session
+```bash
+sudo virsh uri
+```
+> qemu:///system
+- This what we want
 
 2. add the current user to the `libvirt` group
 ```bash
@@ -363,8 +368,14 @@ sudo usermod -aG libvirt $USER
 3. set env variable with the default uri and check
 ```bash
 echo 'export LIBVIRT_DEFAULT_URI="qemu:///system"' >> ~/.bashrc
-sudo virsh uri
 ```
+```bash
+source ~/.bash.rc
+```
+```bash
+virsh uri
+```
+> should be qemu:///system
 
 ## Set ACL for the KVM images directory
 
