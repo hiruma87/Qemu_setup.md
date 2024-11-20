@@ -23,7 +23,8 @@ zgrep CONFIG_KVM /proc/config.gz
 ## Install QEMU, libvirt, viewers, and tools
 ```bash
 sudo pacman -S qemu-full qemu-img libvirt virt-install virt-manager virt-viewer \
-edk2-ovmf swtpm guestfs-tools libosinfo
+edk2-ovmf swtpm guestfs-tools libosinfo iptables-nft nftables dnsmasq bridge-utils \
+vde2
 
 yay -S tuned
 ```
