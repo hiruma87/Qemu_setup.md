@@ -69,6 +69,8 @@ done
 ```bash
 sudo systemctl enable libvirtd.service
 ```
+**Reboot your system**
+___
 
 ## Verify Host Virtualization
 ```bash
@@ -88,12 +90,16 @@ sudo vim /etc/default/grub
 2. Add the following kernel module entries 
 ```
 # /etc/default/grub
+```
+```
 GRUB_CMDLINE_LINUX="... intel_iommu=on iommu=pt"
 ```
 
 3. Regenerate your `grub.cfg` file
 ```bash
 sudo grub-mkconfig -o /boot/grub/grub.cfg
+```
+```bash
 sudo reboot
 ```
 
@@ -123,12 +129,16 @@ sudo vim /etc/default/grub
 ```
 ```
 # /etc/default/grub
+```
+```
 GRUB_CMDLINE_LINUX="... mem_encrypt=on kvm_amd.sev=1"
 ```
 
 2. Regenerate your `grub.cfg` file
 ```bash
 sudo grub-mkconfig -o /boot/grub/grub.cfg
+```
+```
 sudo reboot
 ```
 
