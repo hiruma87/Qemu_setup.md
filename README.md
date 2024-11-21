@@ -176,7 +176,39 @@ sudo tuned-adm verify
 > Verification succeeded, current system settings match the preset profile.
 See TuneD log file ('/var/log/tuned/tuned/log') for details.
 
-## KVM Networking (optional)
+## Activate KVM Network
+- Check if the virsh network is running
+- It should be running after reboot, however in some case, it did not
+  ```bash
+  $ sudo virsh net-list --all
+  ```
+```
+ Name      State      Autostart   Persistent
+----------------------------------------------
+ default   inactive   no          yes
+ ```
+- As you can see, it is inactive and Autostart disable
+- We need to start it
+- To start the network
+  ```bash
+  sudo virsh net-start default
+  ```
+  then set it to auto start after next reboot
+  ```bash
+  sudo virsh net-autostart default
+  ```
+- Check the network status again
+  ```
+  $ sudo virsh net-list --all
+  ```
+```
+ Name      State    Autostart   Persistent
+--------------------------------------------
+ default   active   yes         yes
+```
+- You can use the network in you KVM.
+  
+## KVM Bridge Networking (optional)
 * By default all virtual machines will connect to the built-in default NAT network.
 * To make VMs accessible via the LAN you must create a network bridge.
 * Keep in mind that network bridges won't work with hosts running on Wireless NICs.
@@ -395,7 +427,7 @@ sudo usermod -aG libvirt $USER
 echo 'export LIBVIRT_DEFAULT_URI="qemu:///system"' >> ~/.bashrc
 ```
 ```bash
-source ~/.bash.rc
+source ~/.bashrc
 ```
 ```bash
 virsh uri
