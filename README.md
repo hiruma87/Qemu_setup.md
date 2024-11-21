@@ -28,6 +28,7 @@ edk2-ovmf swtpm guestfs-tools libosinfo iptables-nft nftables dnsmasq bridge-uti
 yay -S tuned
 ```
 > If you get this reminder:
+> 
 > **:: iptables-nft-1:1.8.10-2 and iptables-1:1.8.10-2 are in conflict. Remove iptables? [y/N]**
 > just press y and proceed
 
