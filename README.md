@@ -344,9 +344,17 @@ sudo virsh net-list --all
 If you want to revert the changes to your network, do the following:
 ```bash
 sudo virsh net-destroy nwbridge
+```
+```
 sudo virsh net-undefine nwbridge
+```
+```
 sudo nmcli connection up 'Wired connection 1'
+```
+```
 sudo nmcli connection del bridge0
+```
+```
 sudo nmcli connection del 'Bridge connection 1'
 ```
 
