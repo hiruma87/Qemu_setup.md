@@ -180,7 +180,7 @@ See TuneD log file ('/var/log/tuned/tuned/log') for details.
 - Check if the virsh network is running
 - It should be running after reboot, however in some case, it did not
   ```bash
-  $ sudo virsh net-list --all
+  sudo virsh net-list --all
   ```
 ```
  Name      State      Autostart   Persistent
@@ -199,7 +199,7 @@ See TuneD log file ('/var/log/tuned/tuned/log') for details.
   ```
 - Check the network status again
   ```
-  $ sudo virsh net-list --all
+  sudo virsh net-list --all
   ```
 ```
  Name      State    Autostart   Persistent
@@ -317,6 +317,8 @@ sudo nmcli connection modify bridge0 connection.autoconnect-slaves 1
 6. reactivate the bridge and verify connection.
 ```bash
 sudo nmcli connection up bridge0
+```
+```
 sudo nmcli device status
 ```
 
