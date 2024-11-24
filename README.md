@@ -202,8 +202,11 @@ See TuneD log file ('/var/log/tuned/tuned/log') for details.
   sudo virsh net-list --all
   ```
 > In case you had an error
-> **nable to create bridge virbr0: Package not installed**
+> 
+> **Unable to create bridge virbr0: Package not installed**
+> 
 > Try reboot first.
+> 
 > If persist, reinstall the packages and reboot
   
 ```
