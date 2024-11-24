@@ -203,7 +203,9 @@ See TuneD log file ('/var/log/tuned/tuned/log') for details.
   ```
 > In case you had an error
 **sudo getfacl /var/lib/libvirt/images/**
+
 > Try reboot first.
+
 > If persist, reinstall the packages and reboot
   
 ```
