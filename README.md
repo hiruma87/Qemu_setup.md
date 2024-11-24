@@ -201,12 +201,17 @@ See TuneD log file ('/var/log/tuned/tuned/log') for details.
   ```
   sudo virsh net-list --all
   ```
+> In case you had an error
+**sudo getfacl /var/lib/libvirt/images/**
+> Try reboot first.
+> If persist, reinstall the packages and reboot
+  
 ```
  Name      State    Autostart   Persistent
 --------------------------------------------
  default   active   yes         yes
 ```
-- You can use the network in you KVM.
+- You can now use the network in you KVM.
   
 ## KVM Bridge Networking (optional)
 * By default all virtual machines will connect to the built-in default NAT network.
@@ -421,7 +426,7 @@ sudo virsh uri
 
 2. add the current user to the `libvirt` group
 ```bash
-sudo usermod -aG libvirt $USER
+sudo usermod -aG libvirt.kvm $USER
 ```
 
 3. set env variable with the default uri and check
