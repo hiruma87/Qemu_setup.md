@@ -201,13 +201,10 @@ See TuneD log file ('/var/log/tuned/tuned/log') for details.
   ```
   sudo virsh net-list --all
   ```
-> In case you had an error
-> 
-> **Unable to create bridge virbr0: Package not installed**
-> 
-> Try reboot first.
-> 
-> If persist, reinstall the packages and reboot
+- In case you had an error
+- ```Unable to create bridge virbr0: Package not installed```
+- Try reboot first.
+- If persist, reinstall the packages and reboot
   
 ```
  Name      State    Autostart   Persistent
